@@ -8,8 +8,8 @@ interface TestimonialCardProps {
 function TestimonialCard({ quote, author }: TestimonialCardProps) {
   return (
     <div className="p-6 border rounded-lg shadow-md">
-      <p className="italic text-gray-700">`{quote}`</p>
-      <p className="mt-4 text-gray-800 font-bold">- {author}</p>
+      <p className="italic text-gray-700 dark:text-slate-400">`{quote}`</p>
+      <p className="mt-4 text-gray-800 font-bold dark:text-slate-300">- {author}</p>
     </div>
   );
 }

@@ -9,7 +9,7 @@ import FinalCTASection from "@/components/lp/FinalCTASection";
 import Footer from "@/components/lp/Footer";
 export default function Home() {
   return (
-    <main className="flex flex-col items-center bg-cyan-50">
+    <main className="flex flex-col items-center bg-cyan-50 dark:bg-slate-900">
       <Header />
       <HeroSection />
       <ProblemSolutionSection />

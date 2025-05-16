@@ -13,14 +13,14 @@ function HowStep({ step, title, description }: HowStepProps) {
         {step}
       </div>
       <h3 className="mt-4 text-xl font-semibold">{title}</h3>
-      <p className="mt-2 text-gray-600">{description}</p>
+      <p className="mt-2 text-gray-600 dark:text-slate-400">{description}</p>
     </div>
   );
 }
 
 export default function HowItWorksSection() {
   return (
-    <section className="w-full px-6 py-16 bg-gray-50">
+    <section className="w-full px-6 py-16 bg-slate-200 dark:bg-slate-800">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">How It Works</h2>
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mt-8">

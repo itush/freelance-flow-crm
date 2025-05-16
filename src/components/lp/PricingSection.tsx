@@ -12,7 +12,7 @@ function PricingCard({ plan, price, features }: PricingCardProps) {
     <div className="border rounded-lg p-8 flex flex-col gap-4 shadow-md hover:shadow-xl transition w-full md:w-1/3">
       <h3 className="text-2xl font-bold">{plan}</h3>
       <p className="text-3xl font-extrabold">{price}</p>
-      <ul className="text-gray-600 space-y-2">
+      <ul className="text-gray-600 space-y-2 dark:text-slate-400">
         {features.map((feature, i) => (
           <li key={i}>• {feature}</li>
         ))}
@@ -26,10 +26,10 @@ function PricingCard({ plan, price, features }: PricingCardProps) {
 
 export default function PricingSection() {
   return (
-    <section id="pricing" className="w-full px-6 py-16 bg-gray-50">
+    <section id="pricing" className="w-full px-6 py-16 bg-slate-200 dark:bg-slate-800">
       <div className="max-w-4xl mx-auto text-center">
         <h2 className="text-3xl font-bold mb-4">Pricing</h2>
-        <p className="text-gray-600 mb-8">
+        <p className="text-gray-600 mb-8 dark:text-slate-400">
           Start free and upgrade as your freelance business grows.
         </p>
         <div className="flex flex-col md:flex-row items-center justify-center gap-8">

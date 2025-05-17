@@ -1,16 +1,33 @@
 
 "use client";
+import { FolderPlus, UserRoundPlus } from 'lucide-react';
 
-import React from "react";
+interface ActionButtonsProps {
+  onCreateNewProject?: () => void;
+  onNewClientClick?: () => void;
+}
 
-export default function ActionButtons() {
+// ActionButtons component with callbacks
+export default function ActionButtons({ 
+  onCreateNewProject,
+  onNewClientClick,
+}: ActionButtonsProps) {
+
   return (
-    <div className="mt-8 flex flex-col sm:flex-row gap-4">
-      <button className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 cursor-pointer">
-        Create New Project
+    <div className="mt-8 w-full flex flex-col sm:flex-row gap-4">
+      <button 
+      onClick={onCreateNewProject}
+      className="flex-1 bg-indigo-600 text-white py-2 px-4 rounded hover:bg-indigo-700 cursor-pointer">
+        <div className="flex justify-center items-center">
+          <span>Create New Project</span> <FolderPlus className="ml-2" />
+        </div>
       </button>
-      <button className="flex-1 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 cursor-pointer">
-        New Client
+      <button 
+      onClick={onNewClientClick}
+      className="flex-1 bg-green-600 text-white py-2 px-4 rounded hover:bg-green-700 cursor-pointer">
+        <div className="flex justify-center items-center">
+          <span>New Client</span> <UserRoundPlus className="ml-2" />
+        </div>
       </button>
     </div>
   );

@@ -7,7 +7,7 @@ import React, {
   useEffect,
   ReactNode,  
 } from "react";
-import { account } from "@/app/appwrite";
+import { account } from "@/lib/appwrite";
 import { useRouter } from "next/navigation";
 
 export interface AppwriteUser {

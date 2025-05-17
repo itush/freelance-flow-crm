@@ -4,7 +4,7 @@
 
 import { useState } from "react";
 import { useRouter } from "next/navigation";
-import { account, ID } from "@/app/appwrite";
+import { account, ID } from "@/lib/appwrite";
 import AuthForm from "./AuthForm";
 import { ToggleAuthPrompt } from "./ToggleAuthPrompt";
 import { useAuth } from "@/lib/AuthContext";

@@ -58,7 +58,13 @@ export default function DashboardPage() {
   const handleAddNewClient = async (clientData: ClientData) => {
     // Here you would normally POST/PUT the new client data to your backend.
     try {
-      const createdClient = await createClient(clientData);
+      const createdClient = await createClient({
+        clientCode: clientData.clientCode,
+        clientFirstName: clientData.clientFirstName,
+        clientLastName: clientData.clientLastName,
+        clientEmail: clientData.clientEmail,
+        clientNotes: clientData.clientNotes,
+      });
       console.log("New client added:", createdClient);
       setShowAddClientModal(false);
       // Optionally, update your client list or display a success message.

@@ -1,8 +1,6 @@
 // src/lib/createClient.ts
 import { databases, ID } from "./appwrite";
 
-// Initialize the databases instance using the Appwrite client.
-// export const databases = new Databases(client);
 
 // Define the shape of the client document that you'll be saving.
 export interface ClientDocument {
@@ -22,20 +20,11 @@ export async function createClient(
     const dbId = process.env.NEXT_PUBLIC_APPWRITE_DATABASE_ID || '';
     const colId = process.env.NEXT_PUBLIC_APPWRITE_CLIENTS_COLLECTION_ID || '';
 
-    // Transform the clientData keys to match your collection attributes.
-  const transformedData = {
-    "client-code": clientData.clientCode,
-    "client-first-name": clientData.clientFirstName,
-    "client-last-name": clientData.clientLastName,
-    "client-email": clientData.clientEmail,
-    "client-notes": clientData.clientNotes,
-  };
-
   const response = await databases.createDocument(
     dbId,        // your Appwrite database ID; update if needed
     colId,    // your Appwrite collection ID for clients; update if needed
     ID.unique(),  // generate a unique ID for the new document
-    transformedData    // payload containing the client data
+    clientData    // payload containing the client data
   );
 
   return {
